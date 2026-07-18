@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 1: SEO Best Practices, Accessibility, and User Engagement | CMST 386</title>
+  <meta name="description" content="Project 1 for CMST 386: how search engines work, why keywords and meta descriptions matter, four elements of relevant content links, and good heading hierarchy.">
+  <meta name="keywords" content="SEO, search engines, meta tags, heading hierarchy, keyword optimization, crawling, indexing, ranking">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <p class="site-name">CMST 386 Web Projects</p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+          <a href="project1.html" aria-current="page">Project 1</a>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><span class="nav-placeholder">Project 2</span></li>
+        <li><span class="nav-placeholder">Project 3</span></li>
+        <li><span class="nav-placeholder">Project 4</span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Project 1: SEO Best Practices, Accessibility, and User Engagement</h1>
+
+    <section>
+      <h2>How Search Engines Work</h2>
+      <p>
+        A search engine's job starts with crawling, where automated bots move
+        across the web following links from page to page, and this is what lets
+        the engine discover new or updated content without anyone having to
+        submit it directly. Once a page is found, the engine indexes it by
+        parsing the text, headings, and images and storing that information in a
+        massive database, because without an index there would be nothing to
+        search through when a query actually comes in. The part that does most
+        of the heavy lifting, though, is ranking: when someone types a query,
+        the engine isn't searching the live web in real time, it's pulling from
+        that stored index and running it through an algorithm that weighs
+        hundreds of signals, like relevance, site authority, and page speed, to
+        decide what actually deserves the top spot. Overall, crawling finds the
+        content, indexing organizes it, and ranking is what determines whether a
+        user ever sees it (Google Search Central, n.d.).
+      </p>
+    </section>
+
+    <section>
+      <h2>Why Keywords and Meta Descriptions Matter</h2>
+      <p>
+        Meta tags don't show up anywhere on the visible page, but that doesn't
+        mean they aren't doing work behind the scenes. The meta keywords tag
+        used to signal to search engines what a page was about, while today most
+        engines have stopped weighing it in rankings because it was too easy to
+        stuff with irrelevant terms and manipulate. The meta description is
+        different, and it's really the one that still matters: it's the short
+        summary that appears under your page title in search results, so it
+        functions less like a ranking factor and more like advertising copy that
+        decides whether someone actually clicks through. What really makes a
+        description work is when it's specific and honest about what's on the
+        page, because a vague or misleading description might earn a click but
+        it won't hold the user's trust once they land on a page that doesn't
+        match. Overall, keywords tell the story of what SEO used to look like,
+        while meta descriptions represent what still counts today: writing for
+        the human deciding whether to click, not just the algorithm (Moz, n.d.).
+      </p>
+    </section>
+
+    <section>
+      <h2>Four Elements of Relevant Content Links</h2>
+      <p>
+        Writing a relevant content link comes down to four connected pieces
+        working together. The first is anchor text, and it needs to be
+        descriptive enough that a reader knows exactly where a link goes before
+        they click it, rather than a vague "click here" that gives no context.
+        The second is contextual relevance, meaning the link actually connects
+        to what the surrounding paragraph is talking about, because a link that
+        feels random breaks the flow of the content and leaves the reader
+        confused about why it's even there. The third is credibility of the
+        destination, since linking out to a trustworthy, authoritative source
+        does most of the heavy lifting in building the reader's confidence in
+        the page as a whole. The fourth is natural placement, which is really
+        about not cramming links in just to hit a quota or stacking them at the
+        bottom of the page, but instead letting them sit inside the content
+        where they genuinely add value. Overall, a good content link is anchor
+        text, relevance, credibility, and placement all working in the same
+        direction, and when one of those is missing, the link stops feeling
+        useful and starts feeling like noise.
+      </p>
+    </section>
+
+    <section>
+      <h2>Good Heading Hierarchy</h2>
+      <p>
+        Good heading hierarchy works a lot like an outline, and it matters just
+        as much for structure as it does for readability. Each page should have
+        exactly one h1, which states the main topic, while everything underneath
+        nests logically from there, h2 for major sections and h3 for subsections
+        within those, without skipping a level along the way. This is what
+        really makes a page scannable, because both human readers and screen
+        readers depend on that structure to understand how the content is
+        organized and where they are within it, which reduces cognitive load and
+        lets people jump straight to the section they need instead of reading
+        everything top to bottom. For example, a page might use an h1 of
+        "Search Engine Optimization Basics," followed by an h2 of "How Search
+        Engines Work," with a nested h3 underneath it reading "Crawling and
+        Indexing" — the h1 sets the overall topic, the h2 opens a main section,
+        and the h3 narrows that section down to a specific sub-point, so the
+        hierarchy never jumps straight from h1 to h4 and skips over what should
+        be the connecting structure. Overall, heading hierarchy isn't just a
+        formatting rule, it's information architecture applied to a single page.
+      </p>
+      <h3>The Example in Markup</h3>
+      <pre><code>&lt;h1&gt;Search Engine Optimization Basics&lt;/h1&gt;
+  &lt;h2&gt;How Search Engines Work&lt;/h2&gt;
+    &lt;h3&gt;Crawling and Indexing&lt;/h3&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul>
+        <li>Google Search Central. (n.d.). <em>In-depth guide to how Google Search works</em>. Google. <a href="https://developers.google.com/search/docs/fundamentals/how-search-works">https://developers.google.com/search/docs/fundamentals/how-search-works</a></li>
+        <li>Moz. (n.d.). <em>Meta description</em>. Moz SEO Learning Center. <a href="https://moz.com/learn/seo/meta-description">https://moz.com/learn/seo/meta-description</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gilbert Anderson &middot; CMST 386 — Principles of Web Design and Technology II &middot; <time datetime="2026-07-17">July 17, 2026</time></p>
+  </footer>
+</body>
+</html>

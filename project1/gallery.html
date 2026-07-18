@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Gallery — Project 1 | CMST 386</title>
+  <meta name="description" content="Photo gallery for CMST 386 Project 1 featuring four optimized images with clickable thumbnails, captions, and accessible alt text.">
+  <meta name="keywords" content="photo gallery, image optimization, web accessibility, thumbnails, figcaption, alt text">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <p class="site-name">CMST 386 Web Projects</p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li>
+          <a href="project1.html">Project 1</a>
+          <ul>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          </ul>
+        </li>
+        <li><span class="nav-placeholder">Project 2</span></li>
+        <li><span class="nav-placeholder">Project 3</span></li>
+        <li><span class="nav-placeholder">Project 4</span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Project 1 Photo Gallery</h1>
+    <p>
+      Each thumbnail below is a 100-pixel-wide preview. Click any image to open
+      the full 600-pixel-wide version. Both sizes were exported as web-optimized
+      JPEGs to keep the page fast.
+    </p>
+
+    <section>
+      <h2>Featured Images</h2>
+      <!-- TODO: These four images are generated placeholders. Replace the files
+           in images/ with your own GIMP-processed photos (thumbs ≤100px wide,
+           full versions ≤600px wide), then update each alt text and caption
+           to describe your actual photos. -->
+      <div class="gallery">
+        <figure>
+          <a href="images/full1.jpg">
+            <img src="images/thumb1.jpg" alt="Illustration of dark mountain silhouettes beneath an orange and violet sunset sky with a setting sun" width="100" height="67">
+          </a>
+          <figcaption>Sunset over a mountain ridge, with the sun dipping behind the peaks.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="images/full2.jpg">
+            <img src="images/thumb2.jpg" alt="Illustration of a calm blue ocean meeting a pale sky at the horizon, with light reflecting on the water" width="100" height="67">
+          </a>
+          <figcaption>A calm ocean horizon on a clear afternoon.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="images/full3.jpg">
+            <img src="images/thumb3.jpg" alt="Illustration of layered rows of dark evergreen trees fading into green mist" width="100" height="67">
+          </a>
+          <figcaption>Rows of evergreens fading into morning mist.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="images/full4.jpg">
+            <img src="images/thumb4.jpg" alt="Illustration of a starry night sky with a bright full moon over a dark landscape" width="100" height="67">
+          </a>
+          <figcaption>A full moon and stars over a darkened landscape.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>How These Images Were Prepared</h2>
+      <p>
+        Each photo was scaled in GIMP to a full version no wider than 600 pixels
+        and a thumbnail no wider than 100 pixels, both maintaining the original
+        aspect ratio, then exported as web-optimized JPEGs so the gallery loads
+        quickly even on a slow connection.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gilbert Anderson &middot; CMST 386 — Principles of Web Design and Technology II &middot; <time datetime="2026-07-17">July 17, 2026</time></p>
+  </footer>
+</body>
+</html>

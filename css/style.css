@@ -1,0 +1,201 @@
+/* ==========================================================
+   CMST 386 — shared stylesheet for all project pages
+   Author: Gilbert Anderson
+   ========================================================== */
+
+/* ---- Base ---- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f5f3ef;
+}
+
+/* Accessible skip link: hidden until it receives keyboard focus */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---- Header and navigation ---- */
+header {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem 1.5rem 0;
+}
+
+.site-name {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover AND focus states so the menu works for keyboard users too */
+nav a:hover,
+nav a:focus {
+  background-color: #374151;
+  outline: 2px solid #fbbf24;
+  outline-offset: -2px;
+}
+
+/* Dropdown submenu: hidden until its parent item is hovered or focused */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 11rem;
+  background-color: #1f2937;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 50;
+}
+
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: block;
+}
+
+/* Unlinked placeholder items for future projects */
+.nav-placeholder {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #9ca3af;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* ---- Main content ---- */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: #7c2d12;
+  border-bottom: 3px solid #7c2d12;
+  padding-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+/* Links inside the page body */
+main a {
+  color: #075985;
+}
+
+main a:hover,
+main a:focus {
+  color: #7c2d12;
+  text-decoration-thickness: 2px;
+}
+
+.project-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code sample in the heading-hierarchy section */
+pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* ---- Gallery ---- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #d6d3d1;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto 0.5rem;
+  border-radius: 0.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #44403c;
+  max-width: 12rem;
+}
+
+/* ---- Footer ---- */
+footer {
+  background-color: #1f2937;
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+}
