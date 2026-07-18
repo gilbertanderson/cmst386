@@ -1,0 +1,26 @@
+name: Deploy static site to Azure Web App
+
+# Runs on every push to main, or manually from the Actions tab
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: CMST386-UMGC-ganderson58
+  AZURE_WEBAPP_PACKAGE_PATH: '.'   # repo root — change if your site files live in a subfolder
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
