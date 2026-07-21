@@ -199,3 +199,13 @@ footer {
   padding: 1rem 1.5rem;
   margin-top: 2rem;
 }
+
+/* ---- Photo credits ---- */
+.photo-credits {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.photo-credits li {
+  margin-bottom: 0.5rem;
+}
