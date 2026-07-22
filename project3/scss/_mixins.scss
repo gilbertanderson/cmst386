@@ -1,0 +1,57 @@
+// ==========================================================
+// Project 3 - mixins and functions
+// Reusable blocks (mixins) and a value-returning helper (function)
+// so the stylesheet stays DRY and the arithmetic (operators) runs
+// at compile time instead of in the browser.
+// ==========================================================
+
+@use "sass:map";
+@use "sass:math";
+@use "sass:color";
+@use "variables" as *;
+
+// FUNCTION + OPERATORS: convert a pixel value to rem, assuming a
+// 16px root. math.div and the multiplication are the operators.
+@function px-to-rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+// MIXIN (reads the nested breakpoints map): one media-query helper
+// keeps tablet and phone rules in sync with $breakpoints.
+@mixin respond($name) {
+  $width: map.get($breakpoints, $name);
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// MIXIN: the call-to-action button. Bundles the gradient background,
+// rounded corners, drop shadow, and white text for contrast, plus a
+// darker gradient on hover built with the color.adjust() function.
+@mixin button($from, $to) {
+  display: inline-block;
+  padding: px-to-rem(14) px-to-rem(26);
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, $from, $to);
+  color: $surface;
+  font-family: $font-body;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      135deg,
+      color.adjust($from, $lightness: -8%),
+      color.adjust($to, $lightness: -8%)
+    );
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    outline: 2px solid $highlight;
+    outline-offset: 2px;
+  }
+}

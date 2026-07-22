@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 3: Responsive Design and Web Analytics | CMST 386</title>
+  <meta name="description" content="Project 3 for CMST 386: why responsive design matters for user engagement and how three Google Analytics reports reveal what an audience accesses.">
+  <meta name="keywords" content="responsive design, Google Analytics, media queries, CSS grid, user engagement, mobile web">
+  <!--
+    How SASS preprocessing was run for this project: the source styles live
+    in project3/scss/ (style.scss plus the _variables, _mixins, and _base
+    partials). I compiled them to project3/css/style.css using the Dart Sass
+    command line, run as "npx sass scss/style.scss css/style.css". The
+    compiled css/style.css linked below is the file the browser actually
+    loads; the .scss source is never sent to the browser.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Source+Code+Pro&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header id="top">
+    <p class="site-name">CMST 386 Web Projects</p>
+    <nav aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        <span>Menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="project3.html" aria-current="page">Project 3</a></li>
+        <li><a href="preprocessing.html">Learn Preprocessing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li aria-current="page">Project 3</li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <h1>Project 3: Responsive Design and Web Analytics</h1>
+
+    <section>
+      <h2>Why Responsive Design Matters</h2>
+      <p>
+        Responsive design is what lets a single site adjust itself to whatever
+        screen a person happens to be holding, and in my opinion that
+        flexibility does most of the heavy lifting for user engagement today.
+        Since so much traffic now comes from phones, a layout that reflows from a
+        multi-column desktop view down to a single readable column on a small
+        screen keeps the content accessible instead of forcing people to pinch
+        and zoom. When I think about a site like Wikipedia, the reason it feels
+        usable on any device is that its structure adapts rather than breaks,
+        which lowers cognitive load and keeps the reading experience consistent.
+        For my audience, responsive design really means nobody gets left out
+        because of the device they own, and that inclusiveness is what makes the
+        difference between a visitor who stays and one who leaves.
+      </p>
+    </section>
+
+    <section>
+      <h2>What Google Analytics Tells Me About My Audience</h2>
+      <p>
+        Google Analytics gives me a few different report types that each answer a
+        different question about what my audience actually does. The first one I
+        would lean on is the Acquisition report, because it shows how people find
+        the site in the first place, whether they arrived from a Google search, a
+        direct link, or a social post, so I can see where my traffic is really
+        coming from. The second is the Engagement report, and specifically the
+        Pages and Screens view, since that does most of the heavy lifting for
+        understanding which content people access and how long they stay, so I
+        can tell whether the gallery or the write-ups are holding attention. The
+        third is the Tech Details report under the User section, because it
+        breaks down the devices, browsers, and screen sizes my visitors use,
+        which loops right back to why responsive design matters. Overall, reading
+        these three together gives me a picture of how people arrive, what they
+        engage with, and what they are viewing it all on (Google, n.d.).
+      </p>
+
+      <h3>The Three Reports at a Glance</h3>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Acquisition</h3>
+          <p>Shows how visitors reach the site, such as organic search, direct visits, or referrals, so I know which channels bring people in.</p>
+        </article>
+        <article class="card">
+          <h3>Engagement</h3>
+          <p>The Pages and Screens view reveals which pages the audience accesses and how long they stay, which points to the content that works.</p>
+        </article>
+        <article class="card">
+          <h3>Tech Details</h3>
+          <p>Breaks visitors down by device, browser, and screen size, which is the data that justifies designing responsively in the first place.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a class="cta-button" href="preprocessing.html">Learn Preprocessing</a>
+    </div>
+
+    <section>
+      <h2>References</h2>
+      <ul class="references">
+        <li>Google. (n.d.). <em>[GA4] Reports overview</em>. Analytics Help. <a href="https://support.google.com/analytics/answer/9212670">https://support.google.com/analytics/answer/9212670</a></li>
+        <li>MDN Web Docs. (n.d.). <em>Responsive design</em>. Mozilla. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design</a></li>
+      </ul>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gilbert Anderson &middot; CMST 386 &middot; Principles of Web Design and Technology II &middot; <time datetime="2026-07-21">July 21, 2026</time></p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

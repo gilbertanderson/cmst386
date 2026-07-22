@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Preprocessing with SASS | Project 3 | CMST 386</title>
+  <meta name="description" content="How CSS preprocessing works: client-side versus server-side, and the SASS features (variables, mixins, functions, operators, and nested variables) used in Project 3.">
+  <meta name="keywords" content="SASS, CSS preprocessing, mixins, variables, functions, operators, Dart Sass, scss">
+  <!--
+    How SASS preprocessing was run for this project: the source styles live
+    in project3/scss/ (style.scss plus the _variables, _mixins, and _base
+    partials). I compiled them to project3/css/style.css using the Dart Sass
+    command line, run as "npx sass scss/style.scss css/style.css". That
+    command-line step is the preprocessing; the browser only ever loads the
+    compiled css/style.css, never the .scss source. The file uses several
+    SASS features, including variables, a map of nested variables, a mixin,
+    and a function with arithmetic operators.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Source+Code+Pro&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header id="top">
+    <p class="site-name">CMST 386 Web Projects</p>
+    <nav aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        <span>Menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="project3.html">Project 3</a></li>
+        <li><a href="preprocessing.html" aria-current="page">Learn Preprocessing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="project3.html">Project 3</a></li>
+      <li aria-current="page">Learn Preprocessing</li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <h1>Learn Preprocessing with SASS</h1>
+
+    <section>
+      <h2>Client-Side Versus Server-Side Preprocessing</h2>
+      <p>
+        When I first looked into preprocessing, I found it helps to separate the
+        client-side kind from the server-side kind, because they solve different
+        problems. Client-side preprocessing, like the SASS I used here, runs
+        before the browser is ever involved, since I compile my .scss files down
+        to plain .css on my own machine and the browser only sees the finished
+        stylesheet. Server-side preprocessing happens back on the web server,
+        where a language like PHP assembles the page and sends finished HTML out
+        to the visitor. The reason the distinction matters is that CSS
+        preprocessing is really a developer convenience, so the heavy lifting is
+        done ahead of time before anything ships, while server-side work runs
+        live for each request. Overall, both approaches are about doing the work
+        early so the end user gets something clean and fast (Sass, n.d.).
+      </p>
+    </section>
+
+    <section>
+      <h2>The SASS Features I Used</h2>
+      <p>
+        SASS gives me a handful of features that make a stylesheet feel more like
+        real code, and I used several of them in this project. Variables came
+        first, since storing my colors and spacing in names like
+        <code>$accent</code> and <code>$space</code> means I set a value once and
+        reuse it everywhere, which keeps the whole palette consistent. Nested
+        variables took that further, because I put my breakpoints into a SASS
+        map, which is basically a variable that holds nested key and value pairs,
+        so my tablet and phone widths live in one place. Mixins are reusable
+        blocks of styling, and my button mixin bundles the gradient, rounded
+        corners, and shadow for the call-to-action so I can drop it in with a
+        single line. Functions return a value I can use, so I wrote a small
+        <code>px-to-rem</code> function that converts pixels into rem units, and
+        that function leans on operators, which are just the arithmetic SASS can
+        do, so the division and multiplication happen at compile time instead of
+        in the browser. Overall, these features let me write less repetitive CSS
+        while keeping everything much easier to maintain (Sass, n.d.).
+      </p>
+    </section>
+
+    <section>
+      <h2>From SASS Source to Compiled CSS</h2>
+      <p>
+        Here is a piece of my actual source, showing a variable, the nested
+        breakpoints map, a mixin, and the function with its operators:
+      </p>
+      <pre><code>$accent: #7c2d12;                 // variable
+
+$breakpoints: (                   // nested variables (map)
+  tablet: 768px,
+  phone:  480px,
+);
+
+@function px-to-rem($px) {         // function + operators
+  @return math.div($px, 16) * 1rem;
+}
+
+@mixin button($from, $to) {        // mixin
+  padding: px-to-rem(14) px-to-rem(26);
+  border-radius: 999px;
+  background: linear-gradient(135deg, $from, $to);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}</code></pre>
+
+      <p>
+        After I run the compiler, that same button mixin becomes plain CSS that
+        any browser can read, with the arithmetic already worked out:
+      </p>
+      <pre><code>.cta-button {
+  padding: 0.875rem 1.625rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7c2d12, #b45309);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}</code></pre>
+
+      <p>
+        The complete SASS source for this project lives in the
+        <code>project3/scss/</code> folder, so the files I actually edit are
+        <a href="scss/style.scss">style.scss</a>,
+        <a href="scss/_variables.scss">_variables.scss</a>,
+        <a href="scss/_mixins.scss">_mixins.scss</a>, and
+        <a href="scss/_base.scss">_base.scss</a>. Running the compiler turns
+        all of those into the single
+        <a href="css/style.css">css/style.css</a> file that both pages link.
+      </p>
+    </section>
+
+    <section>
+      <h2>References</h2>
+      <ul class="references">
+        <li>Sass. (n.d.). <em>Sass documentation</em>. <a href="https://sass-lang.com/documentation/">https://sass-lang.com/documentation/</a></li>
+      </ul>
+      <p><a class="back-to-top" href="#top">Back to top</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gilbert Anderson &middot; CMST 386 &middot; Principles of Web Design and Technology II &middot; <time datetime="2026-07-21">July 21, 2026</time></p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

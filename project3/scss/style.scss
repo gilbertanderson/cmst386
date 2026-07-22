@@ -1,0 +1,13 @@
+// ==========================================================
+// Project 3 - main SASS entry point
+// This file pulls the partials together with @use. The compiler
+// turns this source into css/style.css, which is the stylesheet
+// actually linked by project3.html and preprocessing.html.
+//
+// Compiled with the Dart Sass command line:
+//   npx sass scss/style.scss css/style.css
+// ==========================================================
+
+@use "variables";
+@use "mixins";
+@use "base";
