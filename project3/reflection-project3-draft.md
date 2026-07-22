@@ -39,10 +39,10 @@ habit I want to carry into Project 4.
 
 ## Validation screenshots to attach
 
-- [ ] project3.html (validator.w3.org) — pass
-- [ ] preprocessing.html (validator.w3.org) — pass
-- [ ] index.html (validator.w3.org) — pass
-- [ ] style.css (jigsaw.w3.org/css-validator) — pass
+- [ ] project3.html (validator.w3.org) (passing)
+- [ ] preprocessing.html (validator.w3.org) (passing)
+- [ ] index.html (validator.w3.org) (passing)
+- [ ] style.css (jigsaw.w3.org/css-validator) (passing)
 
 ## Live URL
 
