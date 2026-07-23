@@ -704,13 +704,49 @@ code {
     display: inline-flex;
   }
 
+  header {
+    position: relative;
+  }
+
+  /* Take the menu out of the header's flex row entirely and drop it as
+     a full-width panel below the header, so it stacks cleanly on the
+     left instead of shrink-wrapping into whatever space is left next
+     to the toggle button. */
   nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
+    width: auto;
+    gap: 0;
+    margin: 0;
+    padding: 0.5rem 0;
+    background-color: #1e3a8a;
+    box-shadow: 0 16px 28px rgba(15, 23, 42, 0.28);
+    z-index: 60;
+  }
+
+  nav ul.is-open {
+    display: flex;
+  }
+
+  nav li {
     width: 100%;
   }
 
-  nav ul:not(.is-open) {
-    display: none;
+  nav li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  nav a {
+    padding: 0.95rem 1.5rem;
+    border-radius: 0;
+  }
+
+  nav a[aria-current="page"] {
+    background-color: #1e40af;
   }
 }
 
