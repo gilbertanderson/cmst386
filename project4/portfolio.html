@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strikeworks Studio | Portfolio</title>
+  <meta name="description" content="Case studies from Strikeworks Studio: a nonprofit website redesign, a small-business e-commerce build, and a startup landing page, plus real coursework.">
+  <meta name="keywords" content="web design portfolio, case studies, nonprofit website, small business e-commerce, startup landing page">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Strikeworks Studio">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="Strikeworks Studio logo, a rounded square monogram reading SW" width="36" height="36">
+        Strikeworks Studio
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Portfolio</h1>
+    <p>
+      Three client case studies below walk through the challenge, what I
+      actually built, and the result. Each one follows the same shape on
+      purpose, since a reader comparing projects should not have to
+      relearn a new format every time.
+    </p>
+
+    <section>
+      <h2>Case Studies</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <a href="case-nonprofit.html">
+            <img src="images/case-nonprofit-hero.jpg" alt="Illustration of a graduation cap over a blue circuit-board grid, representing the Ironwood Technology Charter School website redesign">
+            <div class="case-card-body">
+              <span class="case-tag">Nonprofit redesign</span>
+              <h3 class="case-title">Ironwood Technology Charter School</h3>
+            </div>
+          </a>
+        </article>
+        <article class="case-card">
+          <a href="case-ecommerce.html">
+            <img src="images/case-ecommerce-hero.jpg" alt="Illustration of a bakery storefront with a pastry icon, representing the Contreras Family Bakery online ordering site">
+            <div class="case-card-body">
+              <span class="case-tag">Small business e-commerce</span>
+              <h3 class="case-title">Contreras Family Bakery</h3>
+            </div>
+          </a>
+        </article>
+        <article class="case-card">
+          <a href="case-startup.html">
+            <img src="images/case-startup-hero.jpg" alt="Illustration of an analytics dashboard with bar and donut charts, representing the Northstar Analytics startup landing page">
+            <div class="case-card-body">
+              <span class="case-tag">Startup landing page</span>
+              <h3 class="case-title">Northstar Analytics</h3>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>From My Coursework</h2>
+      <p>
+        This site is itself part of the portfolio, but two earlier course
+        projects are worth linking directly, since they show the same
+        hand-coded HTML5, CSS3, and JavaScript skill on a smaller scale
+        without any of the polish a full case study write-up adds.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <h3><a href="../project1/project1.html">SEO and Accessibility Project</a></h3>
+          <p>A three-page site covering search engine optimization fundamentals, an accessible image gallery, and full W3C-validated markup.</p>
+        </div>
+        <div class="card">
+          <h3><a href="../project3/project3.html">Responsive Design with SASS</a></h3>
+          <p>A responsive two-page build compiled from hand-written SASS, including a hamburger navigation pattern and two media queries.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <h2>Like what you see?</h2>
+      <p>Let's talk about what a similar project would look like for you.</p>
+      <a class="button button-outline" href="contact.html">Get in touch</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Strikeworks Studio</h2>
+        <p>A one-person UX studio building research-informed, accessible websites for individuals, nonprofits, and small businesses.</p>
+        <p>Current date and time: <span id="datetime"></span></p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/gilbertanderson" aria-label="Strikeworks Studio on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/" aria-label="Strikeworks Studio on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer case studies and legal">
+        <h2>More</h2>
+        <ul>
+          <li><a href="case-nonprofit.html">Ironwood case study</a></li>
+          <li><a href="case-ecommerce.html">Bakery case study</a></li>
+          <li><a href="case-startup.html">Startup case study</a></li>
+          <li><a href="blog-post-seo.html">Latest blog post</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="../index.html">CMST 386 Web Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">Company and institution names referenced in case studies are used for illustrative academic-project purposes only; no endorsement or affiliation is implied. &copy; 2026 Strikeworks Studio. All rights reserved.</p>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strikeworks Studio | Contact</title>
+  <meta name="description" content="Get in touch with Strikeworks Studio to start a website project, request a quote, or ask a question about UX design and development services.">
+  <meta name="keywords" content="contact web designer, request a quote, UX studio contact">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Strikeworks Studio">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="Strikeworks Studio logo, a rounded square monogram reading SW" width="36" height="36">
+        Strikeworks Studio
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Contact</h1>
+    <p>
+      Tell me a little about what you need and I will get back to you within
+      one business day. Fields marked with an asterisk (<span class="required">*</span>) are required.
+    </p>
+
+    <div class="value-grid">
+      <div class="value-card">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <h2>Email</h2>
+        <p>hello@strikeworksstudio.com</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <h2>Based in</h2>
+        <p>Remote, working with clients nationwide</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+        <h2>Hours</h2>
+        <p>Monday to Friday, 9am to 5pm, replies within one business day</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>Send a Message</h2>
+      <form id="contact-form" action="mailto:hello@strikeworksstudio.com" method="post" enctype="text/plain">
+        <fieldset>
+          <legend>Your Information</legend>
+          <div class="field">
+            <label for="contact-name">Name <span class="required">*</span></label>
+            <input type="text" id="contact-name" name="name" placeholder="Your full name" required tabindex="1">
+            <span class="field-error" id="contact-name-error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="contact-email">Email <span class="required">*</span></label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" required tabindex="2">
+            <span class="field-error" id="contact-email-error" role="alert"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Project Details</legend>
+          <div class="field">
+            <label for="contact-service">What do you need?</label>
+            <select id="contact-service" name="service" tabindex="3">
+              <option value="">Select one</option>
+              <option value="ux-research-design">UX research &amp; website design</option>
+              <option value="redesign">Website redesign &amp; refresh</option>
+              <option value="audit">Accessibility &amp; usability audit</option>
+              <option value="maintenance">Ongoing maintenance &amp; support</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-message">Tell me about your project</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="What are you trying to build, and by when?" tabindex="4"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>How should I reach you?</legend>
+          <div class="radio-group" role="radiogroup" aria-label="Preferred contact method">
+            <label for="contact-method-email">
+              <input type="radio" id="contact-method-email" name="contact_method" value="email" checked tabindex="5">
+              Email
+            </label>
+            <label for="contact-method-phone">
+              <input type="radio" id="contact-method-phone" name="contact_method" value="phone" tabindex="6">
+              Phone
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" tabindex="7">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Strikeworks Studio</h2>
+        <p>A one-person UX studio building research-informed, accessible websites for individuals, nonprofits, and small businesses.</p>
+        <p>Current date and time: <span id="datetime"></span></p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/gilbertanderson" aria-label="Strikeworks Studio on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/" aria-label="Strikeworks Studio on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer case studies and legal">
+        <h2>More</h2>
+        <ul>
+          <li><a href="case-nonprofit.html">Ironwood case study</a></li>
+          <li><a href="case-ecommerce.html">Bakery case study</a></li>
+          <li><a href="case-startup.html">Startup case study</a></li>
+          <li><a href="blog-post-seo.html">Latest blog post</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="../index.html">CMST 386 Web Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">Company and institution names referenced in case studies are used for illustrative academic-project purposes only; no endorsement or affiliation is implied. &copy; 2026 Strikeworks Studio. All rights reserved.</p>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+</html>

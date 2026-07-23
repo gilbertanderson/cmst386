@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strikeworks Studio | About</title>
+  <meta name="description" content="Strikeworks Studio is a one-person UX studio run by Gilbert Anderson, building small, research-informed, accessible websites for clients who cannot afford a large agency.">
+  <meta name="keywords" content="about Gilbert Anderson, UX studio, freelance web designer, user experience design, web development process, design principles, accessibility">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Strikeworks Studio">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="Strikeworks Studio logo, a rounded square monogram reading SW" width="36" height="36">
+        Strikeworks Studio
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>About Strikeworks Studio</h1>
+
+    <section>
+      <h2>Who I am</h2>
+      <div class="about-intro">
+        <img src="images/headshot-gilbert.jpg" alt="Illustrated portrait avatar of Gilbert Anderson">
+        <div>
+          <p>
+            I am Gilbert Anderson, and Strikeworks Studio is my one-person UX
+            studio rather than a full agency, which means the person who talks
+            to you about your project is the same person who researches it,
+            designs it, and writes the code. I got here through coursework in
+            user experience and front-end development, and I built this site
+            itself as proof of that work rather than just describing it in a
+            paragraph, since I think a portfolio should let you see the actual
+            craftsmanship instead of taking my word for it.
+          </p>
+          <p>
+            My goal is fairly simple: to design and build small, fast,
+            accessible websites for individuals, nonprofits, and small
+            businesses that need a professional online presence but cannot
+            afford, or do not need, a large agency retainer. Calling
+            Strikeworks a UX studio rather than just a web design shop is
+            deliberate, since every project starts with the same question a
+            larger UX team would ask, namely who is actually going to use this
+            and what are they trying to get done, before a single line of CSS
+            gets written.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who I build for</h2>
+      <p>
+        My clients tend to split into two overlapping groups, and I think it
+        is worth being specific about both since they want different things
+        from the same site. The first group is small-business and nonprofit
+        owners who are usually browsing on a phone during off-hours and want
+        to see proof of past work and a sense of pricing before they ever
+        reach out. The second group is hiring managers and technical
+        recruiters who review a site quickly on a laptop and care more about
+        clean code and organized case studies than persuasive sales copy.
+        Because of that split, I keep the plain-language summary up front on
+        every project and let visitors drill into the technical detail, things
+        like markup choices and accessibility notes, only if they actually
+        choose to.
+      </p>
+    </section>
+
+    <section>
+      <h2>How I design</h2>
+      <p>
+        I try to hold every page to the same four design principles instead of
+        just arranging things until they look right in the moment. Alignment
+        means text and graphic elements line up on a consistent grid instead
+        of floating around with no relationship to each other. Proximity means
+        related items, like a case study's thumbnail, title, and summary, sit
+        close enough together that a visitor reads them as one unit. Contrast
+        means unrelated sections, like the navigation bar and the footer, look
+        visually distinct enough that nobody confuses one for the other. And
+        repetition means headings, spacing, and button styles stay consistent
+        from page to page, which is really the visual half of keeping a whole
+        site maintainable long after launch (Nielsen Norman Group, n.d.).
+      </p>
+      <h3>How I build</h3>
+      <p>
+        Every page on this site shares one external stylesheet, one header,
+        and one footer, so a design change only has to happen in one file
+        instead of across a dozen separate pages. I write semantic HTML5
+        first, meaning the structure of a page should make sense even with
+        every style stripped away, and I layer CSS3 and a small amount of
+        JavaScript on top of that rather than the other way around.
+      </p>
+    </section>
+
+    <div class="cta-band">
+      <h2>Want to see the process in action?</h2>
+      <p>The portfolio walks through three real client projects, challenge, solution, and result.</p>
+      <a class="button button-outline" href="portfolio.html">View the portfolio</a>
+    </div>
+
+    <section>
+      <h2>References</h2>
+      <ul class="references">
+        <li>Nielsen Norman Group. (n.d.). <em>The four fundamental principles of visual design</em>. <a href="https://www.nngroup.com/articles/gestalt-proximity/">https://www.nngroup.com/articles/gestalt-proximity/</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Strikeworks Studio</h2>
+        <p>A one-person UX studio building research-informed, accessible websites for individuals, nonprofits, and small businesses.</p>
+        <p>Current date and time: <span id="datetime"></span></p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/gilbertanderson" aria-label="Strikeworks Studio on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/" aria-label="Strikeworks Studio on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer case studies and legal">
+        <h2>More</h2>
+        <ul>
+          <li><a href="case-nonprofit.html">Ironwood case study</a></li>
+          <li><a href="case-ecommerce.html">Bakery case study</a></li>
+          <li><a href="case-startup.html">Startup case study</a></li>
+          <li><a href="blog-post-seo.html">Latest blog post</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="../index.html">CMST 386 Web Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">Company and institution names referenced in case studies are used for illustrative academic-project purposes only; no endorsement or affiliation is implied. &copy; 2026 Strikeworks Studio. All rights reserved.</p>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strikeworks Studio | Northstar Analytics Case Study</title>
+  <meta name="description" content="Case study: a startup landing page built for Northstar Analytics, a fictional early-stage analytics tool for solo founders, by Strikeworks Studio.">
+  <meta name="keywords" content="startup landing page, case study, SaaS website design, conversion-focused design">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Strikeworks Studio">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-icon.png" alt="Strikeworks Studio logo, a rounded square monogram reading SW" width="36" height="36">
+        Strikeworks Studio
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Northstar Analytics</h1>
+
+    <div class="case-hero">
+      <img src="images/case-startup-hero.jpg" alt="Illustration of an analytics dashboard with bar and donut charts, representing the Northstar Analytics startup landing page">
+    </div>
+
+    <dl class="case-meta">
+      <div>
+        <dt>Client</dt>
+        <dd>Northstar Analytics</dd>
+      </div>
+      <div>
+        <dt>Industry</dt>
+        <dd>Early-stage SaaS startup</dd>
+      </div>
+      <div>
+        <dt>Service</dt>
+        <dd>UX research &amp; website design</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2>The Challenge</h2>
+      <p>
+        Northstar Analytics is a two-person startup building a lightweight
+        metrics dashboard aimed at solo founders who do not want to configure
+        a full analytics suite just to see whether their week went well. They
+        came to me with a working product and a beta waitlist but no landing
+        page, and a hard deadline: a seed-round pitch was three weeks out, and
+        the page needed to exist before then so investors had something to
+        click through instead of a slide deck screenshot.
+      </p>
+    </section>
+
+    <section>
+      <h2>The Solution</h2>
+      <p>
+        Since the founders needed something fast and were going to keep
+        iterating on messaging themselves, I focused the build on a single,
+        clear landing page rather than a multi-page marketing site: one
+        headline stating exactly what the product does, a short feature
+        section, a simple pricing preview, and one repeated call to action
+        pointing to their beta waitlist. I used a CSS grid layout for the
+        feature section specifically because it made the three-column
+        desktop view collapse cleanly to one column on mobile without any
+        extra markup, which mattered given the tight timeline.
+      </p>
+      <p>
+        I also built in a light amount of interactivity, since a static
+        product screenshot does not communicate a live dashboard nearly as
+        well as an interface that visibly responds when you touch it, even
+        in a small way like a hover state on a chart element.
+      </p>
+    </section>
+
+    <section>
+      <h2>The Result</h2>
+      <p>
+        The page shipped four days ahead of the pitch deadline, giving the
+        founders time to review copy changes before the investor meeting
+        rather than editing live the night before. It also gave them a
+        single shareable link for the beta waitlist instead of routing
+        interested users through a shared spreadsheet, which was how they had
+        been collecting signups before.
+      </p>
+    </section>
+
+    <div class="cta-band">
+      <h2>Need a landing page on a real deadline?</h2>
+      <p>Startups do not always have time for a ten-page site, and they usually do not need one yet.</p>
+      <a class="button button-outline" href="contact.html">Get in touch</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Strikeworks Studio</h2>
+        <p>A one-person UX studio building research-informed, accessible websites for individuals, nonprofits, and small businesses.</p>
+        <p>Current date and time: <span id="datetime"></span></p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/gilbertanderson" aria-label="Strikeworks Studio on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/" aria-label="Strikeworks Studio on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer case studies and legal">
+        <h2>More</h2>
+        <ul>
+          <li><a href="case-nonprofit.html">Ironwood case study</a></li>
+          <li><a href="case-ecommerce.html">Bakery case study</a></li>
+          <li><a href="case-startup.html">Startup case study</a></li>
+          <li><a href="blog-post-seo.html">Latest blog post</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="../index.html">CMST 386 Web Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">Company and institution names referenced in case studies are used for illustrative academic-project purposes only; no endorsement or affiliation is implied. &copy; 2026 Strikeworks Studio. All rights reserved.</p>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+</html>
