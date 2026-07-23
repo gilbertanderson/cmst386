@@ -702,6 +702,21 @@ code {
 @media (max-width: 1020px) {
   .nav-toggle {
     display: inline-flex;
+    /* The empty <nav> (its ul is absolutely positioned below) still
+       claims a slot in the header's space-between row, which would
+       otherwise push this button away from the true right edge.
+       margin-left: auto absorbs the free space itself, so the button
+       lands flush right with the same edge margin as the logo. */
+    margin-left: auto;
+  }
+
+  /* header-inner's row gap would otherwise add extra space between
+     the toggle and the now-empty <nav> after it, throwing off the
+     match with the logo's left margin. Only two visible items remain
+     at this width (brand, toggle), positioned by the auto margin
+     above, so no inter-item gap is needed. */
+  .header-inner {
+    gap: 0;
   }
 
   header {
