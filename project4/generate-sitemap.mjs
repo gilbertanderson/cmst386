@@ -10,9 +10,17 @@
 //   BASE_URL="https://example.com/project4/" node generate-sitemap.mjs
 
 import { readdirSync, statSync, writeFileSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve, basename } from "node:path";
 
+// Defaults to the script's own folder (not the shell's cwd), so it works
+// correctly whether it's run as `node generate-sitemap.mjs` from inside
+// project4/ or as `node project4/generate-sitemap.mjs` from the repo root.
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BASE_URL = "https://cmst386-umgc-ganderson58.azurewebsites.net/project4/";
+
+// Files that should never appear in the sitemap even if present.
+const EXCLUDE = new Set(["404.html", "google-site-verification.html"]);
 
 // Per-page changefreq/priority. Anything not listed falls back to DEFAULT_RULE.
 const RULES = {
@@ -51,12 +59,14 @@ function xmlEscape(s) {
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
-  const dir = resolve(args.dir || ".");
+  const dir = resolve(args.dir || SCRIPT_DIR);
   let base = args.base || process.env.BASE_URL || DEFAULT_BASE_URL;
   if (!base.endsWith("/")) base += "/";
   const outPath = resolve(dir, args.out || "sitemap.xml");
 
-  const htmlFiles = readdirSync(dir).filter((f) => f.toLowerCase().endsWith(".html"));
+  const htmlFiles = readdirSync(dir).filter(
+    (f) => f.toLowerCase().endsWith(".html") && !EXCLUDE.has(f)
+  );
 
   // index.html first, then alphabetical for everything else, matching the
   // order the site's own nav/footer roughly follows.
@@ -73,7 +83,7 @@ function main() {
 
   const urlEntries = htmlFiles.map((file) => {
     const stat = statSync(join(dir, file));
-    const rule = RULES[file] || DEFAULT_RULE;
+    const rule = RULES[basename(file)] || DEFAULT_RULE;
     const loc = xmlEscape(base + file);
     return [
       "  <url>",
