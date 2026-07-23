@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cmst386-umgc-ganderson58.azurewebsites.net/project4/sitemap.xml

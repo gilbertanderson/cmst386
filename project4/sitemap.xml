@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/index.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/index.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/about.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/about.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/services.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/portfolio.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-nonprofit.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-ecommerce.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-startup.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/testimonials.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/blog.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/blog-post-seo.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/blog-post-seo.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.51</priority>
   </url>
   <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/contact.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/blog.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-ecommerce.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-nonprofit.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/case-startup.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/contact.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>http://cmst386-umgc-ganderson58.azurewebsites.net/project4/privacy.html</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/portfolio.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/privacy.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.32</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/services.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://cmst386-umgc-ganderson58.azurewebsites.net/project4/testimonials.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
   </url>
 </urlset>

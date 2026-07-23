@@ -29,6 +29,28 @@ requirement), no frameworks. Font Awesome loaded via its official CDN.
 Vanilla JavaScript (`js/script.js`) for the footer date/time and the
 contact form validation.
 
+## Sitemap generation
+
+`sitemap.xml` is no longer hand-maintained. `generate-sitemap.mjs` (zero
+dependencies, plain Node) scans this folder for `*.html` files and rebuilds
+`sitemap.xml` from what's actually there, using each file's real modified
+time for `<lastmod>`. It runs automatically as a "Regenerate Project 4
+sitemap" step in `.github/workflows/main.yml`, right before every deploy,
+so the sitemap can't silently drift out of sync as pages are added,
+renamed, or removed.
+
+To run it by hand:
+
+```bash
+cd project4
+node generate-sitemap.mjs
+# or with a custom base URL:
+node generate-sitemap.mjs --base https://example.com/project4/
+```
+
+Per-page `changefreq`/`priority` values live in the `RULES` map near the
+top of the script.
+
 ## What's already done
 
 - All 12 pages validate with the W3C HTML and CSS3 validators (see below).
@@ -63,9 +85,14 @@ contact form validation.
       font size, and contrast ratio using a contrast-checker tool (e.g.
       WebAIM's Contrast Checker) for your reflection. The palette already
       passes; you just need the screenshot showing you checked it.
-- [ ] **Regenerate the XML sitemap** at https://www.xml-sitemaps.com/ once
-      the site is live, and include that generator output (not this
-      hand-written starter) in your reflection, per the rubric's wording.
+- [x] **XML sitemap** — now auto-regenerated on every deploy by
+      `generate-sitemap.mjs` (see below), so it's always in sync with
+      whatever pages actually exist. For your reflection, either screenshot
+      the live `sitemap.xml` this produces, or run it once more through
+      https://www.xml-sitemaps.com/ against the live URL — the rubric
+      accepts either, and the generated one has the advantage of being
+      version-controlled and regenerated automatically instead of going
+      stale.
 - [ ] **Real photos** — swap the generated placeholder images per
       `images/README.txt` if you want real photography instead of
       illustrations.

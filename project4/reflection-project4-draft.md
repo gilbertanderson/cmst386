@@ -77,9 +77,12 @@ pages one at a time and hoping they stay in sync.
 
 ## XML Sitemap
 
-- [ ] Regenerate at https://www.xml-sitemaps.com/ once the site is live at
-      its real deployed URL, and paste that generator output here (not the
-      hand-written starter in `sitemap.xml`).
+- [x] `sitemap.xml` is now auto-regenerated on every deploy by
+      `generate-sitemap.mjs` (see project4/README.md), so it always matches
+      the real page list.
+- [ ] Paste the live `sitemap.xml` content here (or run it once more
+      through https://www.xml-sitemaps.com/ against the live URL if you
+      prefer that as your documented source, per the rubric's wording).
 
 ## Live URL
 

@@ -18,6 +18,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate Project 4 sitemap
+        working-directory: project4
+        run: node generate-sitemap.mjs --base "https://cmst386-umgc-ganderson58.azurewebsites.net/project4/"
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
