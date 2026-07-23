@@ -69,6 +69,11 @@ header {
   font-size: 1.25rem;
 }
 
+.brand:hover,
+.brand:focus {
+  color: #ffffff;
+}
+
 .brand img {
   width: 2.25rem;
   height: 2.25rem;
