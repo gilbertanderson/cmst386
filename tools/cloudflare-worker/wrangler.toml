@@ -3,12 +3,20 @@ main = "worker.js"
 compatibility_date = "2026-07-01"
 
 # account_id is deliberately not stored here, because this repo is public.
-# Export it before deploying:
+# Export it before deploying (or let wrangler's OAuth session infer it):
 #
 #   export CLOUDFLARE_ACCOUNT_ID='...'
+
+# A route rather than a custom domain. The apex already has proxied DNS records
+# pointing at Cloudflare, and custom_domain mode insists on creating records it
+# owns, so it refuses to attach to a hostname that already has them (API error
+# 100117). A route binds to the existing proxied record instead.
 #
-# Routes are not declared here either. Attach the hostnames from the dashboard
-# instead (Workers & Pages -> gilbertanderson-proxy -> Settings -> Domains &
-# Routes -> Add -> Custom Domain), which creates the proxied DNS records and
-# provisions the edge certificate in one step. A plain route would require you
-# to hand-create a proxied placeholder DNS record first.
+# The /* suffix is required; a bare hostname is custom-domain syntax. zone_name
+# tells wrangler which zone the pattern belongs to.
+#
+# www is intentionally absent: it currently has no DNS record, so a route there
+# would not resolve. Add a proxied CNAME (www -> gilbertanderson.com) first.
+routes = [
+  { pattern = "gilbertanderson.com/*", zone_name = "gilbertanderson.com" },
+]
