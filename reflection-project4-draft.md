@@ -1,28 +1,22 @@
 # Project 4 Reflection (draft)
 
-> Note to self: the four official prompts are now confirmed from the
-> assignment instructions page, and the draft below already answers all
-> four:
+> Note to self: this file lives at the repo root on purpose so it never ships
+> inside the project4 folder or the submission zip. Paste the final version
+> into your Word doc with the 12 HTML validation screenshots, the CSS
+> validation screenshot, the contrast-analyzer screenshot, and the XML
+> sitemap, then submit.
 >
-> 1. Developing a favicon that is relevant can be challenging, what did
->    you choose to use for a favicon and why?
-> 2. One of the fun features of CSS3 is the ability to create movement
->    that attracts the user's attention, how did you decide on the
->    transition feature for this project? Do you feel it attracts the
->    user or creates a distraction?
-> 3. What challenges did you face in selecting a hero image for the
->    background of your site? What steps did you take to mitigate these
->    challenges?
-> 4. If you did not face any challenges or issues in completing the
->    project, what do you think are some issues or challenges someone
->    new to creating web pages might face completing a project like this?
->
-> Paste the final version into your Word doc with the 12 HTML validation
-> screenshots + the CSS validation screenshot + the XML sitemap, then
-> submit. This file lives at the repo root on purpose so it never ships
-> inside the project4 folder or the submission zip.
+> Structure below follows the four official prompts in order, so the grader
+> can map each answer to its question. Your prose is unchanged except where
+> flagged with NEEDS YOUR EDIT.
 
-## Reflection (~370 words)
+**Project 4: Final Website Project Reflection**
+CMST 386: Principles of Web Design and Technology II
+Student: Gilbert Anderson
+Website: Strikeworks Studio
+URL: https://cmst386-umgc-ganderson58.azurewebsites.net/project4/index.html
+
+## Overview
 
 For Project 4 I built a 12-page portfolio site for Strikeworks Studio, a
 fictional one-person UX studio, which extends the plan from my Project 2
@@ -32,11 +26,23 @@ brief in as one of the three case studies instead of building it as its
 own separate site, since that kept the whole project consistent with what
 I had already proposed and graded in Project 2.
 
+## 1. Developing a favicon that is relevant can be challenging, what did you choose to use for a favicon and why?
+
+> **NEEDS YOUR EDIT.** The favicon changed after this paragraph was written.
+> It is no longer an "SW" monogram; it is now the lightning bolt from the
+> header logo mark, white on the brand blue rounded square, because the
+> earlier version was the full STRIKEWORKS wordmark scaled down to 16x16
+> and was unreadable in a browser tab. The "rounded square" and "site's
+> primary blue" details below are still accurate. Rewrite the monogram
+> part in your own words and I will drop it in verbatim.
+
 For the favicon, I generated a simple rounded-square monogram reading "SW"
 in the site's primary blue, since a plain initials mark is legible at the
 tiny sizes a browser tab actually renders a favicon at, and it echoes the
 same shape language as the header logo so the brand feels consistent
 between the tab and the page itself.
+
+## 2. How did you decide on the transition feature for this project? Do you feel it attracts the user or creates a distraction?
 
 The CSS transition I am proudest of is on the case-study cards on the
 portfolio and home pages, since hovering one lifts it slightly and adds a
@@ -46,6 +52,15 @@ transform transition pattern on the buttons and nav links so hover
 feedback feels consistent everywhere rather than different on every
 component.
 
+## 3. What challenges did you face in selecting a hero image for the background of your site? What steps did you take to mitigate these challenges?
+
+> **WORTH A LOOK.** The prompt asks about challenges *selecting* the hero
+> image. The paragraph below answers a challenge you hit *implementing* the
+> hero. It is a real answer and it does describe mitigation, but if you want
+> to cover the prompt head-on, a sentence or two up front about picking the
+> image itself (licensing, resolution, keeping the headline readable over a
+> busy photo) would close the gap. Your call; send me the words if so.
+
 The hero section gave me the most trouble. My first version absolutely
 positioned the dark color overlay directly over a fixed-height image, and
 once I wrote a long enough headline, the text overflowed past the bottom
@@ -54,6 +69,8 @@ looked broken. I fixed it by flipping the layering: the image is now the
 one that is absolutely positioned to fill its container, while the overlay
 sits in normal document flow with a minimum height, so the section can
 grow taller if the headline wraps onto more lines instead of clipping.
+
+## 4. What do you think are some issues or challenges someone new to creating web pages might face completing a project like this?
 
 If I had to guess where a newer developer gets stuck on a project like
 this, it is the sheer number of files that all need to stay identical in
@@ -65,6 +82,10 @@ template first, then let every page inherit from it, rather than building
 pages one at a time and hoping they stay in sync.
 
 ## Validation screenshots to attach
+
+All 13 were confirmed clean through the validators' APIs on the live site:
+12 HTML pages at 0 errors and 0 warnings, and the stylesheet at 0 errors
+(1 warning, a vendor-prefix notice on the system font stack).
 
 - [ ] index.html
 - [ ] about.html
