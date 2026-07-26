@@ -22,17 +22,46 @@ which would otherwise drop visitors onto the Azure hostname mid-session.
 ## Deploy
 
 ```bash
-export CLOUDFLARE_ACCOUNT_ID='...'      # Cloudflare dashboard, Workers & Pages
-npx wrangler login                       # or export CLOUDFLARE_API_TOKEN
+npx wrangler login                       # OAuth session; account is inferred
 cd tools/cloudflare-worker
-npx wrangler deploy
+npx wrangler deploy -c wrangler.toml
 ```
 
-Then attach the hostnames in the dashboard: Workers & Pages ->
-`gilbertanderson-proxy` -> Settings -> Domains & Routes -> Add -> Custom Domain,
-for both `gilbertanderson.com` and `www.gilbertanderson.com`. Cloudflare creates
-the proxied DNS records and provisions the edge certificate itself, so no manual
-DNS entry is needed.
+That is the whole deploy. The hostname is attached by the `routes` entry in
+`wrangler.toml`, so there is no dashboard step.
+
+Pass `-c wrangler.toml` explicitly. Wrangler searches parent directories for
+config, and a stray `wrangler.jsonc` higher up the tree will silently win and
+deploy the wrong thing.
+
+### Why a route and not a custom domain
+
+`custom_domain = true` makes Cloudflare create and own the DNS records for the
+hostname, so it refuses to attach to any hostname that already has them:
+
+```
+code 100117: Hostname 'gilbertanderson.com' already has externally managed
+DNS records (A, CNAME, etc). Delete them first or try a different hostname.
+```
+
+The apex already has proxied records, and a proxied record is exactly what a
+plain route binds to. So the route works with what is already there, needs no
+dashboard access, and deploys with the standard wrangler OAuth scopes
+(`workers_routes` write, `zone` read). Deleting the records to satisfy custom
+domain mode would have been destroying the thing that makes the route work.
+
+Route patterns need the `/*` suffix and a `zone_name`; a bare hostname is
+custom-domain syntax.
+
+### Adding www
+
+`www.gilbertanderson.com` is not attached, because it has no DNS record at all
+and a route cannot resolve without one. To add it: create a proxied CNAME
+(`www` -> `gilbertanderson.com`, orange cloud), then add a second entry to
+`routes` and redeploy.
+
+Expect transient 522s for up to a minute after a route change while it
+propagates. That is not a failure; re-check before debugging.
 
 ## What this does not change
 
