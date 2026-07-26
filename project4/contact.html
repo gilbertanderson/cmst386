@@ -51,23 +51,26 @@
       one business day. Fields marked with an asterisk (<span class="required">*</span>) are required.
     </p>
 
+    <section>
+    <h2>Contact Details</h2>
     <div class="value-grid">
       <div class="value-card">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-        <h2>Email</h2>
+        <h3>Email</h3>
         <p>hello@strikeworksstudio.com</p>
       </div>
       <div class="value-card">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        <h2>Based in</h2>
+        <h3>Based in</h3>
         <p>Remote, working with clients nationwide</p>
       </div>
       <div class="value-card">
         <i class="fa-solid fa-clock" aria-hidden="true"></i>
-        <h2>Hours</h2>
+        <h3>Hours</h3>
         <p>Monday to Friday, 9am to 5pm, replies within one business day</p>
       </div>
     </div>
+    </section>
 
     <section>
       <h2>Send a Message</h2>
@@ -117,9 +120,15 @@
               Phone
             </label>
           </div>
+          <div class="field checkbox-field">
+            <label for="contact-copy">
+              <input type="checkbox" id="contact-copy" name="copy_self" value="yes" tabindex="7">
+              Email me a copy of this message
+            </label>
+          </div>
         </fieldset>
 
-        <button type="submit" tabindex="7">Send Message</button>
+        <button type="submit" tabindex="8">Send Message</button>
       </form>
     </section>
   </main>
@@ -145,8 +154,16 @@
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-                  <li><a href="sitemap.xml">Sitemap</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
         </ul>
+        <form class="footer-search" action="https://duckduckgo.com/" method="get">
+          <input type="hidden" name="sites" value="cmst386-umgc-ganderson58.azurewebsites.net/project4">
+          <label for="site-search">Search this site</label>
+          <div class="footer-search-row">
+            <input type="search" id="site-search" name="q" placeholder="Search Strikeworks">
+            <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </div>
+        </form>
       </nav>
       <nav class="footer-nav" aria-label="Footer case studies and legal">
         <h2>More</h2>

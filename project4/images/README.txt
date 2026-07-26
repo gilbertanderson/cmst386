@@ -1,4 +1,4 @@
-Project 4 (Strikeworks Studio) — image replacement guide
+Project 4 (Strikeworks Studio), image replacement guide
 ==========================================================
 
 Every image in this folder is a generated placeholder illustration, not a
@@ -42,4 +42,4 @@ favicon.ico
 
 Reminder: at least 2 images must remain links and at least 2 must remain
 non-links per the rubric. The current split (3 linked case-study images,
-7 non-linked) already satisfies this — keep that balance if you swap files.
+7 non-linked) already satisfies this, keep that balance if you swap files.
