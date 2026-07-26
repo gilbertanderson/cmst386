@@ -1,0 +1,14 @@
+name = "gilbertanderson-proxy"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+# account_id is deliberately not stored here, because this repo is public.
+# Export it before deploying:
+#
+#   export CLOUDFLARE_ACCOUNT_ID='...'
+#
+# Routes are not declared here either. Attach the hostnames from the dashboard
+# instead (Workers & Pages -> gilbertanderson-proxy -> Settings -> Domains &
+# Routes -> Add -> Custom Domain), which creates the proxied DNS records and
+# provisions the edge certificate in one step. A plain route would require you
+# to hand-create a proxied placeholder DNS record first.
