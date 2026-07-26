@@ -31,38 +31,38 @@
   <main id="main">
     <h1>Project 1 Photo Gallery</h1>
     <p>
-      Each thumbnail below is a 100-pixel-wide preview. Click any image to open
-      the full 600-pixel-wide version. Both sizes were exported as web-optimized
+      Each thumbnail below is a 450-pixel-wide preview cropped to the same
+      3:2 shape. Click any image to open the full 600-pixel-wide version. Both sizes were exported as web-optimized
       JPEGs to keep the page fast.
     </p>
 
     <section>
       <h2>Featured Images</h2>
-      <div class="gallery">
+      <div class="gallery photo-gallery">
         <figure>
           <a href="images/full1.jpg">
-            <img src="images/thumb1.jpg" alt="Sun setting behind a mountain range, its light breaking through orange clouds and fog in the valley" width="100" height="67">
+            <img src="images/thumb1.jpg" alt="Sun setting behind a mountain range, its light breaking through orange clouds and fog in the valley" width="450" height="300">
           </a>
           <figcaption>Sunset in the mountains, with sunlight shining through orange clouds and fog.</figcaption>
         </figure>
 
         <figure>
           <a href="images/full2.jpg">
-            <img src="images/thumb2.jpg" alt="Calm blue ocean stretching to the horizon under a clear pale sky with scattered clouds" width="100" height="67">
+            <img src="images/thumb2.jpg" alt="Calm blue ocean stretching to the horizon under a clear pale sky with scattered clouds" width="450" height="300">
           </a>
           <figcaption>Open ocean meeting a clear sky at the horizon.</figcaption>
         </figure>
 
         <figure>
           <a href="images/full3.jpg">
-            <img src="images/thumb3.jpg" alt="Dark conifer forest on a hillside partly hidden by drifting mist" width="100" height="56">
+            <img src="images/thumb3.jpg" alt="Dark conifer forest on a hillside partly hidden by drifting mist" width="450" height="300">
           </a>
           <figcaption>A misty conifer forest climbing the hillside.</figcaption>
         </figure>
 
         <figure>
           <a href="images/full4.jpg">
-            <img src="images/thumb4.jpg" alt="Bright full moon rising in a dark night sky" width="100" height="51">
+            <img src="images/thumb4.jpg" alt="Bright full moon rising in a dark night sky" width="450" height="300">
           </a>
           <figcaption>A full moon rising in the dark sky.</figcaption>
         </figure>
@@ -115,9 +115,11 @@
       <h2>How These Images Were Prepared</h2>
       <p>
         Each photo was scaled with image-editing software to a full version no
-        wider than 600 pixels and a thumbnail no wider than 100 pixels, both
-        maintaining the original aspect ratio, then exported as web-optimized
-        JPEGs so the gallery loads quickly even on a slow connection.
+        wider than 600 pixels that keeps its original aspect ratio, plus a
+        thumbnail no wider than 450 pixels cropped to a uniform 3:2 shape so
+        the gallery grid lines up evenly, then both were exported as
+        web-optimized JPEGs so the gallery loads quickly even on a slow
+        connection.
       </p>
     </section>
   </main>

@@ -306,6 +306,32 @@ figcaption {
   max-width: 12rem;
 }
 
+/* Photo gallery (Project 1): every thumbnail is the same 3:2 size and
+   fills the top of its card edge-to-edge. Scoped to .photo-gallery so
+   Project 2's wireframe gallery keeps the padded figure look. */
+.photo-gallery figure {
+  flex: 0 1 15rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.photo-gallery figure a {
+  display: block;
+}
+
+.photo-gallery figure img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+.photo-gallery figcaption {
+  max-width: none;
+  padding: 0.75rem;
+}
+
 /* ---- Footer ---- */
 footer {
   background-color: #1f2937;
