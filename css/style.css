@@ -1,5 +1,5 @@
 /* ==========================================================
-   CMST 386 — shared stylesheet for all project pages
+   CMST 386, shared stylesheet for all project pages
    Author: Gilbert Anderson
    ========================================================== */
 
@@ -98,6 +98,113 @@ nav li:focus-within > ul {
   color: #9ca3af;
   font-weight: bold;
   cursor: default;
+}
+
+/* ---- Mobile navigation toggle ----
+   Same collapse pattern as Project 4's header. Scoped to the
+   .nav-collapsible class so only pages that actually include the
+   toggle button (and js/main.js) collapse their menu; the other
+   pages sharing this stylesheet keep the wrapping nav and are never
+   left with a hidden menu they cannot open. */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background-color: #374151;
+  border: 1px solid rgba(249, 250, 251, 0.35);
+  border-radius: 0.4rem;
+  color: #f9fafb;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: #4b5563;
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+.nav-toggle-bars {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-toggle-bar {
+  width: 20px;
+  height: 2px;
+  background-color: #f9fafb;
+  border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+  .nav-collapsible {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-collapsible .site-name {
+    margin: 0;
+  }
+
+  .nav-collapsible .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* Drop the menu as a full-width panel below the header instead of
+     letting it shrink-wrap next to the toggle button. */
+  .nav-collapsible nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5rem 0;
+    background-color: #1f2937;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
+    z-index: 60;
+  }
+
+  .nav-collapsible nav ul.is-open {
+    display: flex;
+  }
+
+  .nav-collapsible nav li {
+    width: 100%;
+  }
+
+  .nav-collapsible nav li + li {
+    border-top: 1px solid rgba(249, 250, 251, 0.15);
+  }
+
+  .nav-collapsible nav a {
+    padding: 0.95rem 1.5rem;
+  }
+
+  /* Submenus render inline and indented inside the open panel, since
+     there is no hover state to reveal them on a touch screen. */
+  .nav-collapsible nav ul ul {
+    display: block;
+    position: static;
+    min-width: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .nav-collapsible nav ul ul a {
+    padding-left: 2.75rem;
+    font-weight: normal;
+  }
 }
 
 /* ---- Main content ---- */

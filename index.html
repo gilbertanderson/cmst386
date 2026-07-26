@@ -10,10 +10,18 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header>
+  <header class="nav-collapsible">
     <p class="site-name">CMST 386 Web Projects</p>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <span class="nav-toggle-bars">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </span>
+      Menu
+    </button>
     <nav aria-label="Main">
-      <ul>
+      <ul id="nav-menu">
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li>
           <a href="project1/project1.html">Project 1</a>
@@ -61,5 +69,6 @@
   <footer>
     <p>Gilbert Anderson &middot; CMST 386 &middot; Principles of Web Design and Technology II &middot; <time datetime="2026-07-17">July 17, 2026</time></p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
