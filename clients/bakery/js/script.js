@@ -82,21 +82,32 @@ function initOrderForm() {
 
   var MSG_NAME = "Please enter your name.";
   var MSG_EMAIL = "Please enter an email address so we can confirm your order.";
-  var MSG_DATE = "Please choose a pickup date at least 72 hours from today.";
+  var MSG_LEAD = "Please choose a pickup date at least 72 hours from today.";
+  var MSG_CLOSED = "We cannot do custom pickups on Sundays or Mondays. Please choose Tuesday through Saturday.";
 
-  /* 72 hours is the real constraint the bakery works to, so the form
-     enforces it rather than letting an impossible date through. */
+  /* Two real constraints from the Visit page, enforced here so the form
+     cannot accept a date the bakery is unable to honour: a 72 hour lead
+     time, and no custom pickups on Sunday (pan dulce only) or Monday
+     (closed). */
   function validateDate() {
     var slot = document.getElementById("order-date-error");
-    var ok = false;
-    if (date.value) {
+    var message = "";
+    if (!date.value) {
+      message = MSG_LEAD;
+    } else {
+      var chosen = new Date(date.value + "T00:00:00");
       var earliest = new Date();
       earliest.setHours(0, 0, 0, 0);
       earliest.setDate(earliest.getDate() + 3);
-      ok = new Date(date.value + "T00:00:00") >= earliest;
+      if (chosen < earliest) {
+        message = MSG_LEAD;
+      } else if (chosen.getDay() === 0 || chosen.getDay() === 1) {
+        message = MSG_CLOSED;
+      }
     }
+    var ok = message === "";
     if (slot) {
-      slot.textContent = ok ? "" : MSG_DATE;
+      slot.textContent = message;
     }
     date.setAttribute("aria-invalid", ok ? "false" : "true");
     return ok;
@@ -117,7 +128,7 @@ function initOrderForm() {
     var dateIsOk = validateDate();
     if (!nameOk || !emailOk || !dateIsOk) {
       event.preventDefault();
-      window.alert("Please complete the required fields marked with an asterisk, and choose a pickup date at least 72 hours out, before sending.");
+      window.alert("Please fix the highlighted field or fields before sending. Pickups need at least 72 hours notice and run Tuesday through Saturday.");
       (!nameOk ? name : !emailOk ? email : date).focus();
     }
   });

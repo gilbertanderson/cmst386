@@ -39,10 +39,10 @@ something quietly breaks.
 
 ## Validation results
 
-- [ ] index.html — W3C HTML validator screenshot: *(insert)*
-- [ ] project1.html — W3C HTML validator screenshot: *(insert)*
-- [ ] gallery.html — W3C HTML validator screenshot: *(insert)*
-- [ ] style.css — W3C CSS (Jigsaw) validator screenshot: *(insert)*
+- [ ] index.html: W3C HTML validator screenshot: *(insert)*
+- [ ] project1.html: W3C HTML validator screenshot: *(insert)*
+- [ ] gallery.html: W3C HTML validator screenshot: *(insert)*
+- [ ] style.css: W3C CSS (Jigsaw) validator screenshot: *(insert)*
 
 ## Live site
 

@@ -63,9 +63,12 @@ re-run the crawl against the live URL and replace the file.
 - SEO meta tags (description, keywords, robots, author, copyright) and a
   unique `<title>` on every page; one `<h1>` and logical `h2`-`h6` order
   everywhere, with a 25+ word intro under every `<h1>`.
-- Placeholder favicon (`favicon.ico`) and images generated locally so the
-  site is complete and submittable as-is; see `images/README.txt` for what
-  to swap in later.
+- The favicon (`favicon.ico`) is a deliberate mark, not a placeholder: the
+  lightning bolt from the header logo, white on the brand blue, at 16, 32,
+  and 48 pixels. An earlier version was the full wordmark scaled down and
+  was illegible in a browser tab.
+- Photography is still generated placeholder imagery; see `images/README.txt`
+  for what to swap in later.
 
 ## Remaining manual steps (yours, not automatable)
 

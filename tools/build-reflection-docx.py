@@ -18,7 +18,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "reflection-project4-draft.md"
-SHOTS = ROOT / "project4" / "validation-screenshots"
+SHOTS = ROOT / "validation-screenshots"
 OUT = ROOT / "Project4-Reflection-GilbertAnderson.docx"
 
 PAGES = ["index", "about", "services", "portfolio", "case-nonprofit",

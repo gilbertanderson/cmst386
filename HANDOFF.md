@@ -1,53 +1,37 @@
-# Handoff: CMST 386 site — Project 2 added, ready to push
+# Handoff notes
 
-## Where things stand
-- Repo: `/Users/gilbertanderson/Development/cmst386` (git remote: `origin` → `github.com/gilbertanderson/cmst386.git`)
-- Deploy: `.github/workflows/main.yml` auto-deploys to Azure Web App
-  `CMST386-UMGC-ganderson58` on every push to `main` (uses secret
-  `AZURE_WEBAPP_PUBLISH_PROFILE`, already configured in GitHub repo settings).
-- Local commit `3aac9a2` is made and NOT yet pushed — my Mac had no internet
-  connection when I tried (`git push` failed with "Could not resolve host:
-  github.com", confirmed via failed pings to 8.8.8.8 and DNS lookups).
+This file used to carry the Project 2 handoff, describing an unpushed commit and
+a 10-page plan for Project 4. All of that is long done and the details had gone
+stale, so it has been replaced with a pointer to the things that are actually
+kept current.
 
-## Immediate next step
-Once internet is back, from the repo root run:
-```
-git push origin main
-```
-That's it — the workflow picks it up and redeploys automatically. Confirm
-the live page at `https://cmst386-umgc-ganderson58.azurewebsites.net/project2/project2.html`
-after a minute or two, and check the Home page nav now links Project 2
-instead of showing it grayed out.
+## Where state lives now
 
-## What was added this commit
-- `project2/project2.html` — new Project 2 page, same header/nav/footer
-  pattern as `project1/project1.html`. Summarizes the proposal (client/topic,
-  audience + personas, site map, wireframes v1 and v2, security/hosting/
-  marketing, references) and links to the full Word doc.
-- `project2/Project2-Website-Proposal-GilbertAnderson.docx` — the complete
-  250/250-rubric proposal document (all 10 required sections plus
-  References), source of truth for the written content.
-- `project2/images/` — `sitemap.png`, `wireframe-home-v1.png` /
-  `wireframe-interior-v1.png` (low-fidelity, built with Matplotlib),
-  `wireframe-home-v2.png` / `wireframe-interior-v2.png` (higher-fidelity,
-  built with Claude Design).
-- `index.html` and `project1/project1.html` — nav placeholder for
-  "Project 2" replaced with a real link to `project2/project2.html`;
-  homepage project list updated too.
+- **[README.md](README.md)** is the accurate overview: what each project is,
+  where the client sites live, how deployment works, and both hostnames.
+- **[project4/README.md](project4/README.md)** documents the Project 4 rubric
+  decisions, including why it is 12 pages rather than 10 and why `sitemap.xml`
+  must not be regenerated.
+- **[clients/README.md](clients/README.md)** covers the three client sites and
+  their accessibility work.
+- **[tools/cloudflare-worker/README.md](tools/cloudflare-worker/README.md)**
+  explains the reverse proxy serving `gilbertanderson.com`.
 
-## Project 4 build plan (from the proposal, for when that project starts)
-10 HTML5 pages, flat IA, one shared header/nav/footer + one external
-stylesheet, same pattern as this repo already uses for Project 1:
-`index.html` (Home), `about.html`, `services.html`, `portfolio.html`,
-`case-nonprofit.html`, `case-ecommerce.html`, `case-startup.html`,
-`testimonials.html`, `blog.html`, `blog-post-seo.html`. No e-commerce, no
-accounts, no password-protected content. Target domain
-`gilbertandersondesign.com` (not yet registered — just proposed/reasoned
-about per the assignment, verify actual availability before Project 4).
+## Current state, July 2026
 
-## Known open items (outside this commit, still on Gilbert)
-- Verify `gilbertandersondesign.com` availability via an actual registrar.
-- Get instructor approval on the Project 2 topic.
-- Per assignment instructions: upload the `project2` folder to the Aloft
-  web server (separate from the Azure deploy), and submit the working URL
-  in the LEO assignment folder.
+All four projects are built, deployed, and validating clean. Project 4 is 12
+pages at `project4/`, live at
+`https://cmst386-umgc-ganderson58.azurewebsites.net/project4/index.html`, which
+is the canonical URL and the one submitted for grading. The same deployment is
+also reachable at `https://gilbertanderson.com/` through a Cloudflare Worker.
+
+The domain actually registered is `gilbertanderson.com`. The Project 2 proposal
+named `gilbertandersondesign.com` as its target; that proposal is already
+graded, so the two intentionally differ and neither should be edited to match
+the other.
+
+## Still on Gilbert
+
+- Upload the `project4` folder to the Aloft server and set file permissions.
+- Submit the live URL, the reflection document, and the zip to the LEO
+  assignment folder.

@@ -7,7 +7,7 @@ front of results, and that gate is Gilbert's to click, not this script's to
 work around. Once cleared, the clearance cookie is stored in the profile so
 the remaining pages go through without asking again.
 
-Outputs to project4/validation-screenshots/:
+Outputs to validation-screenshots/ at the repo root (gitignored, never deployed):
     html-<page>.png   x12   W3C Nu validator result per page
     css-style.png            W3C Jigsaw result for css/style.css
     contrast-<pair>.png x4   WebAIM contrast checker per colour pair
@@ -39,7 +39,7 @@ CONTRAST_PAIRS = [
 ]
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "project4" / "validation-screenshots"
+OUT = ROOT / "validation-screenshots"
 PROFILE = ROOT / ".claude" / "playwright-profile"
 
 GATE_SECONDS = 300
