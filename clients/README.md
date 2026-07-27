@@ -14,8 +14,34 @@ affects the Project 4 page count, sitemap, or robots.txt.
 | Folder | Client | Pages | Linked from |
 |---|---|---|---|
 | `ironwood/` | Ironwood Technology Charter School | 10 | `project4/case-nonprofit.html`, `project4/testimonials.html` |
+| `bakery/` | Contreras Family Bakery | 5 | `project4/case-ecommerce.html`, `project4/testimonials.html` |
+| `northstar/` | Northstar Analytics | 1 | `project4/case-startup.html`, `project4/testimonials.html` |
 
-Bakery and Northstar sites are planned next, at roughly four to five pages each.
+Each site has its own brand palette, stylesheet, and favicon. All three were
+contrast-checked before any CSS was written.
+
+## Contreras Family Bakery
+
+Five pages: Home, Menu, Order, About, Visit. Delivers what the case study
+claims: a menu with photos and real prices, and a structured order page with a
+pickup date picker, a cake-size select, and a notes field routed to email rather
+than a shopping cart. The order form additionally enforces the bakery's real
+72-hour lead time in JavaScript, so an impossible pickup date cannot be
+submitted.
+
+## Northstar Analytics
+
+**One page, deliberately.** The case study says the founders needed "a single,
+clear landing page rather than a multi-page marketing site," so building this as
+four or five pages would have contradicted the write-up. It has the headline,
+feature section, pricing preview, and repeated waitlist call to action the case
+study describes.
+
+The case study also mentions light interactivity, "a hover state on a chart
+element." That is the sample weekly chart. The bars are real `<button>`
+elements rather than styled divs, so they respond to hover, click, and keyboard
+focus alike, and the readout is a `role="status"` region so the figure is
+announced without stealing focus.
 
 ## Ironwood
 

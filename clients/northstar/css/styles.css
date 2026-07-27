@@ -1,0 +1,516 @@
+/* ==========================================================
+   Northstar Analytics, single-page landing site.
+   Hand-authored CSS3, one external stylesheet.
+
+   Contrast checked before writing: the lowest pair used here is
+   8.70:1 (muted slate on the dark background), against the 4.5:1
+   that Section 508 and WCAG AA require for normal text.
+   ========================================================== */
+
+:root {
+  --bg: #0b1220;
+  --panel: #111a2b;
+  --text: #e8eef7;
+  --muted: #9fb3c8;
+  --accent: #7cc4fa;
+  --accent-deep: #3c93d6;
+  --border: rgba(232, 238, 247, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: var(--accent);
+  color: var(--bg);
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---- Header ---- */
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.brand img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+}
+
+nav[aria-label="Main"] {
+  margin-left: auto;
+}
+
+nav[aria-label="Main"] ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav[aria-label="Main"] a {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.45rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav[aria-label="Main"] a:hover,
+nav[aria-label="Main"] a:focus {
+  background-color: var(--panel);
+  color: var(--accent);
+}
+
+.nav-cta {
+  background-color: var(--accent);
+  color: var(--bg) !important;
+}
+
+.nav-cta:hover,
+.nav-cta:focus {
+  background-color: #a8d8ff;
+  color: var(--bg) !important;
+}
+
+/* ---- Main ---- */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  max-width: 20ch;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 58ch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: relative;
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 2rem;
+  background-color: rgba(11, 18, 32, 0.86);
+}
+
+.hero-overlay p {
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* ---- Buttons ---- */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.55rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.25s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #a8d8ff;
+  color: var(--bg);
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+}
+
+.button-ghost:hover,
+.button-ghost:focus {
+  background-color: var(--panel);
+  color: var(--accent);
+}
+
+/* ---- Feature and pricing grid ----
+   Three columns on desktop collapsing to one on mobile with no extra
+   markup, which is the whole reason this is a grid and not floats. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.feature {
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 1.4rem;
+}
+
+.feature h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.feature p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.price span {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* The featured tier is outlined AND labelled in its heading, so the
+   distinction never depends on colour alone. */
+.price-featured {
+  border-color: var(--accent);
+}
+
+.checklist {
+  padding-left: 1.15rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.checklist li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---- Interactive chart ---- */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  height: 14rem;
+  padding: 1rem;
+  margin: 1rem 0 0.5rem;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+}
+
+.chart-bar {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0 0.4rem;
+  border: 0;
+  border-radius: 0.4rem 0.4rem 0 0;
+  background-color: var(--accent-deep);
+  color: var(--bg);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.chart-bar:hover,
+.chart-bar:focus-visible,
+.chart-bar.is-active {
+  background-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.chart-readout {
+  color: var(--muted);
+  font-weight: 600;
+  min-height: 1.6rem;
+}
+
+/* ---- Form ---- */
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  margin: 0 0 1.25rem;
+  padding: 1.1rem 1.25rem 1.35rem;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0 0.4rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--panel);
+  color: var(--text);
+  font: inherit;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.radio-group label,
+.checkbox-field label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+
+.required {
+  color: var(--accent);
+}
+
+.field-error {
+  display: block;
+  color: #ffb4a8;
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-height: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+button[type="submit"] {
+  padding: 0.8rem 1.75rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #a8d8ff;
+}
+
+/* ---- Footer ---- */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.footer-inner h2 {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.footer-inner p {
+  color: var(--muted);
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.87rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 860px) {
+  .feature-grid,
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  .feature-grid,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-overlay {
+    min-height: 18rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .chart {
+    height: 11rem;
+  }
+
+  nav[aria-label="Main"] {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contreras Family Bakery | Order a Cake</title>
+  <meta name="description" content="Order a custom cake from Contreras Family Bakery. Choose your pickup date and cake size, add notes for decoration or dietary needs, and the request goes straight to the bakery by email.">
+  <meta name="keywords" content="order custom cake online, cake pickup Sacramento, custom cake request form">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Contreras Family Bakery">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-bakery.png" alt="Contreras Family Bakery logo: a golden scored loaf of bread on a brown rounded square" width="96" height="96">
+        <span class="brand-name">
+          Contreras Family Bakery
+          <span class="brand-tagline">Sacramento &middot; Family owned since 2009</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" aria-current="page">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Order a Custom Cake</h1>
+    <p class="lede">
+      Fill this in and it comes straight to the bakery email that Maria checks
+      through the day. We reply to confirm price and pickup time, usually within
+      a few hours. Fields marked with an asterisk
+      (<span class="required">*</span>) are required.
+    </p>
+
+    <div class="panel">
+      <h2>Before you start</h2>
+      <ul class="checklist">
+        <li>We need <strong>at least 72 hours</strong>, and a full week in December or around graduation.</li>
+        <li>Payment happens at pickup, in the shop. Nothing is charged here.</li>
+        <li>For allergies or dietary needs, put them in the notes and we will call you.</li>
+      </ul>
+    </div>
+
+    <h2>Your order</h2>
+    <form id="order-form" action="mailto:orders@contrerasbakery.example" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Your contact information</legend>
+        <div class="field">
+          <label for="order-name">Your name <span class="required">*</span></label>
+          <input type="text" id="order-name" name="name" placeholder="First and last name" required tabindex="1">
+          <span class="field-error" id="order-name-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="order-email">Email address <span class="required">*</span></label>
+          <input type="email" id="order-email" name="email" placeholder="you@example.com" required tabindex="2">
+          <span class="field-error" id="order-email-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="order-phone">Phone number</label>
+          <input type="tel" id="order-phone" name="phone" placeholder="Best number for questions about your order" tabindex="3">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cake details</legend>
+        <div class="field">
+          <label for="order-date">Pickup date <span class="required">*</span></label>
+          <input type="date" id="order-date" name="pickup_date" required tabindex="4">
+          <span class="field-error" id="order-date-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="order-size">Cake size</label>
+          <select id="order-size" name="size" tabindex="5">
+            <option value="">Select a size</option>
+            <option value="6-round">6 inch round, serves 6 to 8, $34</option>
+            <option value="8-round">8 inch round, serves 10 to 14, $46</option>
+            <option value="10-round">10 inch round, serves 16 to 22, $62</option>
+            <option value="quarter">Quarter sheet, serves 20 to 25, $58</option>
+            <option value="half">Half sheet, serves 40 to 50, $92</option>
+            <option value="two-tier">Two tier, serves 30 to 40, from $135</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="order-flavor">Cake flavour</label>
+          <select id="order-flavor" name="flavor" tabindex="6">
+            <option value="">Select a flavour</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="tres-leches">Tres leches</option>
+            <option value="almond">Almond</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="order-notes">Decoration, lettering, and notes</label>
+          <textarea id="order-notes" name="notes" rows="5" placeholder="What should it say? Any colours, allergies, or details we should know?" tabindex="7"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>How should we confirm?</legend>
+        <div class="radio-group" role="radiogroup" aria-label="Preferred confirmation method">
+          <label for="confirm-email">
+            <input type="radio" id="confirm-email" name="confirm" value="email" checked tabindex="8">
+            Email
+          </label>
+          <label for="confirm-phone">
+            <input type="radio" id="confirm-phone" name="confirm" value="phone" tabindex="9">
+            Phone call
+          </label>
+          <label for="confirm-text">
+            <input type="radio" id="confirm-text" name="confirm" value="text" tabindex="10">
+            Text message
+          </label>
+        </div>
+        <div class="field checkbox-field">
+          <label for="order-specials">
+            <input type="checkbox" id="order-specials" name="specials" value="yes" tabindex="11">
+            Email me when seasonal items come back, like pan de muerto
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" tabindex="12">Send order request</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Contreras Family Bakery</h2>
+        <p>
+          1841 Franklin Boulevard<br>
+          Sacramento, CA 95818<br>
+          (916) 555-0172
+        </p>
+        <p>Current date and time: <span id="datetime"></span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer pages">
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer credits">
+        <h2>More</h2>
+        <ul>
+          <li><a href="../../project4/case-ecommerce.html">Site by Strikeworks Studio</a></li>
+          <li><a href="../../project4/index.html">Strikeworks Studio</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">
+      Contreras Family Bakery is a fictional client created for a CMST 386
+      coursework project. &copy; 2026 Contreras Family Bakery.
+    </p>
+  </footer>
+</body>
+</html>
