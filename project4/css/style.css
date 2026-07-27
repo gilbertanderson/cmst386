@@ -897,3 +897,12 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Link out from a case study to the client site that was actually built. */
+.live-site-link {
+  margin-top: 1.5rem;
+}
+
+.live-site-link .fa-solid {
+  margin-right: 0.5rem;
+}

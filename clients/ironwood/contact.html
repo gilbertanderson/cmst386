@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironwood Technology Charter School | Contact</title>
+  <meta name="description" content="Contact Ironwood Technology Charter School with admissions questions, tour requests, partnership inquiries, or general questions. Front office hours, location, and an accessible inquiry form.">
+  <meta name="keywords" content="contact Ironwood, school office hours, admissions questions, request a tour, partnership inquiry">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Gilbert Anderson">
+  <meta name="copyright" content="Copyright 2026 Ironwood Technology Charter School">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-ironwood.png" alt="Ironwood Technology Charter School logo: a white I and T monogram on a navy rounded square" width="96" height="96">
+        <span class="brand-name">
+          Ironwood Technology Charter School
+          <span class="brand-tagline">Austin, Texas &middot; Tuition-free public charter</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bars">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+        Menu
+      </button>
+      <nav aria-label="Main">
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Contact Us</h1>
+    <p>
+      Questions about applying, visiting, or partnering with the school are all
+      welcome here. Fields marked with an asterisk (<span class="required">*</span>)
+      are required.
+    </p>
+
+    <h2>Where to find us</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Campus</h3>
+        <p>4400 Wolf Creek Parkway<br>Austin, TX 78725</p>
+      </div>
+      <div class="card">
+        <h3>Front office</h3>
+        <p>(512) 555-0148<br>Monday to Friday, 7:30 a.m. to 4:30 p.m.</p>
+      </div>
+      <div class="card">
+        <h3>Admissions</h3>
+        <p><a href="mailto:admissions@ironwoodtech.example">admissions@ironwoodtech.example</a><br>Replies within two school days</p>
+      </div>
+    </div>
+
+    <h2>Send us a message</h2>
+    <form id="inquiry-form" action="mailto:admissions@ironwoodtech.example" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Your information</legend>
+        <div class="field">
+          <label for="inquiry-name">Student or guardian name <span class="required">*</span></label>
+          <input type="text" id="inquiry-name" name="name" placeholder="First and last name" required tabindex="1">
+          <span class="field-error" id="inquiry-name-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="inquiry-email">Email address <span class="required">*</span></label>
+          <input type="email" id="inquiry-email" name="email" placeholder="you@example.com" required tabindex="2">
+          <span class="field-error" id="inquiry-email-error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="inquiry-phone">Phone number</label>
+          <input type="tel" id="inquiry-phone" name="phone" placeholder="Optional" tabindex="3">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What can we help with?</legend>
+        <div class="field">
+          <label for="inquiry-topic">Reason for contacting us</label>
+          <select id="inquiry-topic" name="topic" tabindex="4">
+            <option value="">Select one</option>
+            <option value="admissions">Admissions and applying</option>
+            <option value="tour">Scheduling a tour or visit</option>
+            <option value="academics">Academic programs and tracks</option>
+            <option value="partnership">Employer or community partnership</option>
+            <option value="teaching">Teaching at Ironwood</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="inquiry-grade">Grade the student would enter</label>
+          <select id="inquiry-grade" name="grade" tabindex="5">
+            <option value="">Not applicable</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="inquiry-message">Your question</label>
+          <textarea id="inquiry-message" name="message" rows="5" placeholder="Tell us what you would like to know" tabindex="6"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which track interests the student most?</legend>
+        <div class="radio-group" role="radiogroup" aria-label="Track of interest">
+          <label for="track-stem">
+            <input type="radio" id="track-stem" name="track" value="stem" checked tabindex="7">
+            STEM
+          </label>
+          <label for="track-trades">
+            <input type="radio" id="track-trades" name="track" value="trades" tabindex="8">
+            Skilled Trades
+          </label>
+          <label for="track-undecided">
+            <input type="radio" id="track-undecided" name="track" value="undecided" tabindex="9">
+            Undecided
+          </label>
+        </div>
+        <div class="field checkbox-field">
+          <label for="inquiry-updates">
+            <input type="checkbox" id="inquiry-updates" name="updates" value="yes" tabindex="10">
+            Email me tour dates and application deadline reminders
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" tabindex="11">Send message</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h2>Ironwood Technology Charter School</h2>
+        <p>
+          4400 Wolf Creek Parkway<br>
+          Austin, TX 78725<br>
+          (512) 555-0148
+        </p>
+        <p>Current date and time: <span id="datetime"></span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer school">
+        <h2>School</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="Footer support and legal">
+        <h2>More</h2>
+        <ul>
+          <li><a href="support.html">Support Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="../../project4/case-nonprofit.html">Site by Strikeworks Studio</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-bottom">
+      Ironwood Technology Charter School is a fictional client created for a
+      CMST 386 coursework project. Company names shown are used illustratively
+      and imply no endorsement or affiliation.
+      &copy; 2026 Ironwood Technology Charter School.
+    </p>
+  </footer>
+</body>
+</html>
