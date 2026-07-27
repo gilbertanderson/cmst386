@@ -28,19 +28,21 @@ I had already proposed and graded in Project 2.
 
 ## 1. Developing a favicon that is relevant can be challenging, what did you choose to use for a favicon and why?
 
-> **NEEDS YOUR EDIT.** The favicon changed after this paragraph was written.
-> It is no longer an "SW" monogram; it is now the lightning bolt from the
-> header logo mark, white on the brand blue rounded square, because the
-> earlier version was the full STRIKEWORKS wordmark scaled down to 16x16
-> and was unreadable in a browser tab. The "rounded square" and "site's
-> primary blue" details below are still accurate. Rewrite the monogram
-> part in your own words and I will drop it in verbatim.
+> **DRAFTED FOR YOUR REVIEW.** The old paragraph described an "SW" monogram,
+> which is not what is deployed. Rewritten below to describe the actual
+> favicon and to keep the legibility reasoning you already had. Change
+> anything that does not sound like you.
 
-For the favicon, I generated a simple rounded-square monogram reading "SW"
-in the site's primary blue, since a plain initials mark is legible at the
-tiny sizes a browser tab actually renders a favicon at, and it echoes the
-same shape language as the header logo so the brand feels consistent
-between the tab and the page itself.
+For the favicon I ended up using the lightning bolt from the Strikeworks
+header logo, white on a rounded square in the site's primary blue. My first
+attempt was the full STRIKEWORKS wordmark scaled down, and it turned into an
+unreadable smudge at the sixteen pixels a browser tab actually gives you,
+which taught me that a favicon is not really a shrunken logo so much as a
+separate piece of design work with its own constraints. A single bold shape
+survives that size in a way lettering does not. Because the bolt already
+sits inside the wordmark as the letter I, the tab still reads as the same
+brand rather than as some unrelated icon, so I got the legibility without
+giving up the consistency between the tab and the page itself.
 
 ## 2. How did you decide on the transition feature for this project? Do you feel it attracts the user or creates a distraction?
 
@@ -54,12 +56,22 @@ component.
 
 ## 3. What challenges did you face in selecting a hero image for the background of your site? What steps did you take to mitigate these challenges?
 
-> **WORTH A LOOK.** The prompt asks about challenges *selecting* the hero
-> image. The paragraph below answers a challenge you hit *implementing* the
-> hero. It is a real answer and it does describe mitigation, but if you want
-> to cover the prompt head-on, a sentence or two up front about picking the
-> image itself (licensing, resolution, keeping the headline readable over a
-> busy photo) would close the gap. Your call; send me the words if so.
+> **OPENING DRAFTED FOR YOUR REVIEW.** The prompt asks about challenges
+> *selecting* the hero image, so the first paragraph below is new and covers
+> that. Your original paragraph follows it unchanged as the implementation
+> half of the answer.
+
+Choosing the hero image itself came with constraints before I wrote any
+markup. I wanted something that suggested focused design work without
+looking like generic stock photography, it had to be licensed in a way I
+could actually publish for a coursework project, and it had to stay dark and
+uncluttered enough through the middle that white headline text sitting on
+top of it would still clear the 4.5:1 contrast minimum. That last one is
+what drove the decision. Rather than hunting for a photograph that happened
+to be dark in exactly the right region, I committed to a semi-transparent
+dark overlay between the image and the text, which let me choose the image
+on composition alone and guarantee the contrast independently of whatever
+was in the picture.
 
 The hero section gave me the most trouble. My first version absolutely
 positioned the dark color overlay directly over a fixed-height image, and
@@ -103,10 +115,27 @@ All 13 were confirmed clean through the validators' APIs on the live site:
 
 ## Color contrast analyzer
 
-- [ ] Screenshot a contrast-checker tool (e.g. WebAIM Contrast Checker)
-      showing: background color #ffffff, foreground color #1e293b (or
-      #1e3a8a / #2563eb for headings and links), your chosen font size,
-      and the resulting contrast ratio (all pairs already pass 4.5:1+).
+Four WebAIM Contrast Checker screenshots are attached, one per colour pair,
+each showing the selected background colour, the selected foreground colour,
+and the resulting ratio. Font sizes are noted in each caption.
+
+All ten text pairs used on the site were computed and every one passes:
+
+| Ratio | Pair | Used for |
+|---|---|---|
+| 5.02:1 | #b45309 on #ffffff | Service prices, required-field asterisks |
+| 5.17:1 | #2563eb on #ffffff | h3 headings, links, icons |
+| 5.17:1 | #ffffff on #2563eb | Button text on the accent colour |
+| 7.29:1 | #bfdbfe on #1e3a8a | Nav links in the header |
+| 7.58:1 | #475569 on #ffffff | Muted body text |
+| 8.72:1 | #ffffff on #1e40af | Nav hover, footer social icons |
+| 10.36:1 | #1e3a8a on #ffffff | h2 headings |
+| 10.36:1 | #ffffff on #1e3a8a | Header, footer, and CTA band text |
+| 13.44:1 | #1e293b on #eff6ff | Form field text on pale blue |
+| 14.63:1 | #1e293b on #ffffff | Body text |
+
+The lowest ratio on the site is 5.02:1, comfortably above the 4.5:1 the
+rubric requires for normal text.
 
 ## XML Sitemap
 
