@@ -72,10 +72,31 @@ function initNavToggle() {
   if (!toggle || !menu) {
     return;
   }
+  function setOpen(open) {
+    toggle.setAttribute("aria-expanded", String(open));
+    menu.classList.toggle("is-open", open);
+  }
+
   toggle.addEventListener("click", function () {
-    var isOpen = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!isOpen));
-    menu.classList.toggle("is-open");
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  // Opening the menu in portrait and then rotating to landscape leaves
+  // is-open set, so the panel reappears already open on the way back.
+  // Clear it once the viewport is past the breakpoint that shows the button.
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1020) {
+      setOpen(false);
+    }
+  });
+
+  // Escape closes the menu and returns focus to the button, so keyboard
+  // users are not stranded inside an open panel.
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      toggle.focus();
+    }
   });
 }
 

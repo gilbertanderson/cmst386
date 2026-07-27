@@ -340,6 +340,15 @@ a:focus {
   margin-top: 0.25rem;
 }
 
+/* Icons that sit inline ahead of a section heading. Sized in em so they
+   scale with whatever heading they are attached to, and marked
+   aria-hidden in the markup since the heading text already says it. */
+.heading-icon {
+  color: #2563eb;
+  font-size: 0.85em;
+  margin-right: 0.5rem;
+}
+
 /* ---- Service cards ---- */
 .service-grid {
   display: grid;
