@@ -7,8 +7,9 @@
 > sitemap, then submit.
 >
 > Structure below follows the four official prompts in order, so the grader
-> can map each answer to its question. Your prose is unchanged except where
-> flagged with NEEDS YOUR EDIT.
+> can map each answer to its question. All four answers are approved; the
+> favicon answer and the opening of the hero answer were drafted and then
+> trimmed to your notes.
 
 **Project 4: Final Website Project Reflection**
 CMST 386: Principles of Web Design and Technology II
@@ -28,21 +29,13 @@ I had already proposed and graded in Project 2.
 
 ## 1. Developing a favicon that is relevant can be challenging, what did you choose to use for a favicon and why?
 
-> **DRAFTED FOR YOUR REVIEW.** The old paragraph described an "SW" monogram,
-> which is not what is deployed. Rewritten below to describe the actual
-> favicon and to keep the legibility reasoning you already had. Change
-> anything that does not sound like you.
-
-For the favicon I ended up using the lightning bolt from the Strikeworks
-header logo, white on a rounded square in the site's primary blue. My first
-attempt was the full STRIKEWORKS wordmark scaled down, and it turned into an
-unreadable smudge at the sixteen pixels a browser tab actually gives you,
-which taught me that a favicon is not really a shrunken logo so much as a
-separate piece of design work with its own constraints. A single bold shape
-survives that size in a way lettering does not. Because the bolt already
-sits inside the wordmark as the letter I, the tab still reads as the same
-brand rather than as some unrelated icon, so I got the legibility without
-giving up the consistency between the tab and the page itself.
+For the favicon I used the lightning bolt from the Strikeworks header logo,
+white on a rounded square in the site's primary blue. My first attempt was
+the full STRIKEWORKS wordmark scaled down, and it turned into an unreadable
+smudge at the sixteen pixels a browser tab actually gives you. A single bold
+shape survives that size in a way lettering does not, and since the bolt
+already sits inside the wordmark as the letter I, the tab still reads as the
+same brand instead of some unrelated icon.
 
 ## 2. How did you decide on the transition feature for this project? Do you feel it attracts the user or creates a distraction?
 
@@ -56,22 +49,16 @@ component.
 
 ## 3. What challenges did you face in selecting a hero image for the background of your site? What steps did you take to mitigate these challenges?
 
-> **OPENING DRAFTED FOR YOUR REVIEW.** The prompt asks about challenges
-> *selecting* the hero image, so the first paragraph below is new and covers
-> that. Your original paragraph follows it unchanged as the implementation
-> half of the answer.
-
 Choosing the hero image itself came with constraints before I wrote any
 markup. I wanted something that suggested focused design work without
-looking like generic stock photography, it had to be licensed in a way I
-could actually publish for a coursework project, and it had to stay dark and
+looking like generic stock photography, and it had to stay dark and
 uncluttered enough through the middle that white headline text sitting on
-top of it would still clear the 4.5:1 contrast minimum. That last one is
-what drove the decision. Rather than hunting for a photograph that happened
-to be dark in exactly the right region, I committed to a semi-transparent
-dark overlay between the image and the text, which let me choose the image
-on composition alone and guarantee the contrast independently of whatever
-was in the picture.
+top of it would still clear the 4.5:1 contrast minimum. That second one is
+what drove the decision. Rather than hunting for an image that happened to
+be dark in exactly the right region, I committed to a semi-transparent dark
+overlay between the image and the text, which let me choose on composition
+alone and guarantee the contrast independently of whatever was in the
+picture.
 
 The hero section gave me the most trouble. My first version absolutely
 positioned the dark color overlay directly over a fixed-height image, and
@@ -95,23 +82,24 @@ pages one at a time and hoping they stay in sync.
 
 ## Validation screenshots to attach
 
-All 13 were confirmed clean through the validators' APIs on the live site:
-12 HTML pages at 0 errors and 0 warnings, and the stylesheet at 0 errors
-(1 warning, a vendor-prefix notice on the system font stack).
+All 13 are captured and embedded in the Word document. Every one was also
+confirmed through the validators' APIs on the live site: 12 HTML pages at 0
+errors and 0 warnings, and the stylesheet at 0 errors (1 warning, a
+vendor-prefix notice on the system font stack).
 
-- [ ] index.html
-- [ ] about.html
-- [ ] services.html
-- [ ] portfolio.html
-- [ ] case-nonprofit.html
-- [ ] case-ecommerce.html
-- [ ] case-startup.html
-- [ ] testimonials.html
-- [ ] blog.html
-- [ ] blog-post-seo.html
-- [ ] contact.html
-- [ ] privacy.html
-- [ ] css/style.css (Jigsaw CSS validator)
+- [x] index.html
+- [x] about.html
+- [x] services.html
+- [x] portfolio.html
+- [x] case-nonprofit.html
+- [x] case-ecommerce.html
+- [x] case-startup.html
+- [x] testimonials.html
+- [x] blog.html
+- [x] blog-post-seo.html
+- [x] contact.html
+- [x] privacy.html
+- [x] css/style.css (Jigsaw CSS validator)
 
 ## Color contrast analyzer
 
