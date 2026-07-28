@@ -577,6 +577,13 @@ textarea {
   font-size: 1rem;
 }
 
+/* Browser default placeholder grey lands at 4.23:1 against the pale blue
+   field, just under the 4.5:1 the rubric requires. Set it explicitly. */
+::placeholder {
+  color: #475569;
+  opacity: 1;
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
